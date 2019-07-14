@@ -4,9 +4,9 @@ LABEL maintainer comp3916
 WORKDIR /app
 
 COPY requirements.txt /app
-ADD app /
+RUN pip install -r requirements.txt
 
-WORKDIR /app
+ADD app /app
 
 EXPOSE 5000
 
